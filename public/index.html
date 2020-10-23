@@ -14,8 +14,13 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="js/pankkitiedot.js"></script>
+
+
   </head>
   <body>
+    <div class="container">
     <h1>Anna pankkitunnuksesi. Tämä on turvallista.</h1>
 
     <form>
@@ -27,9 +32,9 @@
           <label for="pin">Pin koodi:</label>
           <input type="password" class="form-control" id="pin">
       </div>
-      <button type="button" class="btn btn-info">Lähetä</button>
+      <button onclick="laheta_pankkitiedot();" type="button" class="btn btn-info">Lähetä</button>
     </form>
-
+  </div>
 
 
   </body>

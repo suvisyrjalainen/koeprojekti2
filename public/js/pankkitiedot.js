@@ -5,3 +5,10 @@ function laheta_pankkitiedot() {
   console.log(nimi);
   console.log(pin);
 }
+
+
+async function haePankkitiedot(){
+ const response = await fetch("/salaisetpankkitiedot");
+ const data = await response.json();
+ console.log(data);
+}

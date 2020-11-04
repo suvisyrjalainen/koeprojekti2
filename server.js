@@ -5,17 +5,25 @@ const app = express()
 app.listen(3000, () => console.log("kuuntelen"));
 app.use(express.static("public"));
 
+app.use(express.json({limit: '1mb'}));
+
 const pankkikorttitiedot = [
     {
         "nimi": "Suvi Syrjäläinen",
-        "pinkoodi": "1234"
+        "pin": "1234"
     },
     {
       "nimi": "Alex Epic",
-      "pinkoodi": "9812"
+      "pin": "9812"
     }
 ]
 
 app.get('/salaisetpankkitiedot', function (req, res) {
   res.send(pankkikorttitiedot)
+})
+
+app.post('/pankkitietojen_talletus', function (req, res) {
+ pankkikorttitiedot.push(req.body);
+ console.log(pankkikorttitiedot);
+ res.send(200);
 })

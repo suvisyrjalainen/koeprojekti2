@@ -22,12 +22,6 @@ function laheta_pankkitiedot() {
     }, function(error){
       console.log(error.message);
     });
-
-
-
-
-
-
 }
 
 

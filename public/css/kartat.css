@@ -1,0 +1,51 @@
+.otsikkoalue{
+  background-color: lightgray;
+  width: 100%;
+  height: 20vh;
+  border-style: solid;
+  border-color: #339966;
+  text-align: center;
+}
+
+.otsikkoteksti{
+  margin-top: 2vh;
+  color: brown;
+  font-family: cursive;
+  font-size: 8vh;
+}
+
+#kartta{
+  width: 100%;
+  height: 75vh;
+  border-style: solid;
+  border-color: #339966;
+}
+
+.tallenna_nappi{
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  border: solid;
+  border-radius: 50px;
+  border-width: 20px;
+  position: absolute;
+  bottom: 50px;
+  right: 20px;
+  font-size: 24px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.5);
+}
+
+.ok_nappi{
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border: solid;
+  border-radius: 25px;
+  border-width: 10px;
+  font-size: 12px;
+  box-shadow: 0 4px 9px 0 rgba(0,0,0,0.5), 0 3px 10px 0 rgba(0,0,0,0.5);
+}
+
+#arvostelulomake{
+  display: none;
+}

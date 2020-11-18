@@ -36,28 +36,60 @@
       <h1 class="otsikkoteksti">Suvi Maps 2021</h1>
   </div>
 
-  <div class="kartta_nappi_yhdistelma">
-      <div id="kartta"></div>
-      <!--<button class="tallenna_nappi" type="button" name="button">Tallenna sijainti</button>-->
-      <input onclick="tallenna_sijainti()" type="button" value="TS" class="tallenna_nappi leaflet-control" />
-  </div>
+  <div class="row">
 
-  <div id="arvostelulomake">
-    <form class="form-inline">
-      <div class="form-group">
-          <label for="paikka">Paikka:</label>
-          <input type="text" class="form-control" id="paikka">
+    <div class="col-sm-8">
+      <div class="kartta_nappi_yhdistelma">
+          <div id="kartta"></div>
+          <!--<button class="tallenna_nappi" type="button" name="button">Tallenna sijainti</button>-->
+          <input onclick="tallenna_sijainti()" type="button" value="TS" class="tallenna_nappi leaflet-control" />
       </div>
 
-      <div class="form-group">
-          <label for="arvostelu">Arvostelu:</label>
-          <input type="text" class="form-control" id="arvostelu">
-          <button onclick="kirjoita_kartalle()" type="button" class="ok_nappi">OK</button>
-      </div>
-      <!--<button type="button" class="ok_nappi">OK</button>-->
-    </form>
-  </div>
+      <div id="arvostelulomake">
+        <form class="form-inline">
+          <div class="form-group">
+              <label for="paikka">Paikka:</label>
+              <input type="text" class="form-control" id="paikka">
+          </div>
 
+          <div class="form-group">
+              <label for="arvostelu">Arvostelu:</label>
+              <input type="text" class="form-control" id="arvostelu">
+          </div>
+
+          <div class="form-group">
+              <label for="arvostelija">Arvostelija:</label>
+              <input type="text" class="form-control" id="arvostelija">
+              <button onclick="kirjoita_kartalle()" type="button" class="ok_nappi">OK</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <th>Paikka</th>
+            <th>Arvostelu</th>
+            <th>Arvostelija</th>
+          </tr>
+          <tr>
+            <td>Lepaa</td>
+            <td>En ole käynyt</td>
+            <td>Suvi</td>
+          </tr>
+          <tr>
+            <td>Pori</td>
+            <td>Yyteri on mahtava</td>
+            <td>Suvi taas</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
 
   </body>
 </html>

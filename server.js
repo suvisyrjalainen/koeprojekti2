@@ -18,6 +18,20 @@ const pankkikorttitiedot = [
     }
 ]
 
+const paikkatiedot = [
+    {
+        "latitude": "61.4740",
+        "longitude": "23.8419",
+        "paikka": "Turtola",
+        "arvostelu": "Kotipaikkani",
+        "arvostelija": "Suvi"
+    }
+]
+
+app.get('/haevierailut', function (req, res) {
+  res.send(paikkatiedot)
+})
+
 app.get('/salaisetpankkitiedot', function (req, res) {
   res.send(pankkikorttitiedot)
 })

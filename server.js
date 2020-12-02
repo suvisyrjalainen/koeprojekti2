@@ -25,7 +25,15 @@ const paikkatiedot = [
         "paikka": "Turtola",
         "arvostelu": "Kotipaikkani",
         "arvostelija": "Suvi"
+    },
+    {
+        "latitude": "61.4509",
+        "longitude": "23.8488",
+        "paikka": "Hervanta",
+        "arvostelu": "Betonia",
+        "arvostelija": "Pertsa"
     }
+
 ]
 
 app.get('/haevierailut', function (req, res) {

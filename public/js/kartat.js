@@ -36,10 +36,10 @@ async function haePaikkatiedot(){
  const data = await response.json();
  console.log(data);
 
- L.marker([data[0].latitude, data[0].longitude]).addTo(map)
- .bindPopup(data[0].paikka + "<br>" + data[0].arvostelu)
- .openPopup();
-
+ var i;
+ for (i = 0; i < data.length; i++) {
+    L.marker([data[i].latitude, data[i].longitude]).addTo(map).bindPopup(data[i].paikka + "<br>" + data[i].arvostelu).openPopup();
+ }
 }
 
 function tallenna_sijainti() {

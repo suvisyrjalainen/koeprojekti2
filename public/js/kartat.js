@@ -39,7 +39,28 @@ async function haePaikkatiedot(){
  var i;
  for (i = 0; i < data.length; i++) {
     L.marker([data[i].latitude, data[i].longitude]).addTo(map).bindPopup(data[i].paikka + "<br>" + data[i].arvostelu).openPopup();
+    // Find a <table> element with id="myTable":
+    var table = document.getElementById("paikkataulukko");
+
+    // Create an empty <tr> element and add it to the 1st position of the table:
+    var row = table.insertRow(1 + i);
+
+    // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+
+    // Add some text to the new cells:
+    cell1.innerHTML = data[i].paikka;
+    cell2.innerHTML = data[i].arvostelu;
+    cell3.innerHTML = data[i].arvostelija;
  }
+
+
+ L.marker([latitude, longitude]).addTo(map)
+ .bindPopup('Olet tässä')
+ .openPopup();
+
 }
 
 function tallenna_sijainti() {
